@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    outline: none;
+    border: none;
+    list-style : none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+:root {
+    --main-color: hsl(107.8deg 49.4% 48.82%);
+    --text-color : black;
+    --second-main-color : #fff;
+}
+
+.hide-items{
+    display: none;
+}
+body {
+    min-height: 100vh;
+}
+.header{
+    box-shadow: 0 0 .5rem var(--text-color);
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9rem;
+    background-color: var(--main-color);
+    width: 100%;
+    height: 6rem;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    /* justify-content: center; */
+}
+.logo-container{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: url('logo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.logo-text {
+    color: var(--second-main-color);
+    font-size: 1.8rem;
+    
+}
+
+.navbar {
+    width: 50%;
+}
+
+.main-bar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.main-bar li a{
+    font-size: 1.2rem;
+    color: var(--second-main-color);
+    font-weight: 400;
+    transition: .5s;
+}
+
+.main-bar li a:hover {
+    font-weight: 500;
+    color: var(--text-color);
+}
+.main-bar li a i{
+    font-size: 2.5rem;
+
+}
+#menu-icon{
+    display: none;
+}
+#cross-icon i{
+    transform: rotate(90deg);
+}
+span {
+    color: var(--main-color);
+}
+
+.home {
+    /* height: calc(100vh - 6rem); */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10% 9rem;
+}
+.side-bar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 2rem 2rem;
+    height: 100vh;
+    width: 30vw;
+    background-color: var(--main-color);
+}
+.side-bar li a{
+    font-size: 1.5rem;
+    color: var(--second-main-color);
+}
+.main-bar li i{
+    font-size: 3rem;
+}
+.side-bar li i{
+    font-size: 3rem;
+}
+.home-content{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    /* gap: .5rem; */
+}
+.heading {
+    font-size: 2.5rem;
+}
+.home-content h3{
+    font-size: 2rem;
+}
+.home-content p{
+    color: var(--text-color);
+}
+.home-img {
+    width: 25rem;
+    height: 25rem;
+    background: url('founder2.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: .1rem solid var(--text-color);
+    /* animation: floatImage 4s ease-in-out infinite; */
+}
+@keyframes floatImage {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.btn-container {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btn1{
+    background-color: var(--main-color);
+    padding: .5rem 1.2rem;
+    font-weight: 500;
+    border: .1rem solid var(--main-color);
+    border-radius: .5rem;
+    transition: .5s;
+    color: var(--second-main-color);
+}
+.btn1:hover {
+    color: var(--main-color);
+    background-color: var(--second-main-color);
+}
+
+.btn2{
+    color: var(--main-color);
+    padding: .5rem 1.2rem;
+    font-weight: 500;
+    border: .1rem solid var(--main-color);
+    border-radius: .5rem;
+    transition: .5s;
+    background-color: transparent;
+}
+.btn2:hover{
+    color: var(--second-main-color);
+    background-color: var(--main-color);
+}
+.btn3{
+    color: var(--second-main-color);
+    padding: .5rem 1.2rem;
+    font-weight: 500;
+    border: .1rem solid var(--second-main-color);
+    border-radius: .5rem;
+    transition: .5s;
+    background-color: transparent;
+}
+
+.btn3:hover{
+    background-color: var(--second-main-color);
+    color: var(--main-color);
+}
+.about{
+    width: 100%;
+    /* height: calc(100vh - 6rem) */
+    height: 100vh;
+    /* position: relative; */
+    background-color: var(--main-color);
+    padding: 10% 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.about-img {
+    width: 25rem;
+    height: 25rem;
+    /* animation: floatImage 4s ease-in-out infinite; */
+    background: url('logo.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: .1rem solid var(--text-color);
+}
+
+.about-content {
+    width: 55%;
+}
+.about-content span , p{
+    color: var(--second-main-color);
+}
+.about-content div{
+    margin-top: 2rem;
+}
+
+.team{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10% 9rem;
+}
+.team-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    gap: 2rem;
+}
+.team-card{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    padding: 1rem;
+    gap: .5rem;
+    transition: .5s;
+}
+
+.team-card:hover{
+    transform: scale(1.05);
+}
+.team-card h3{
+    font-size: 1.5rem;
+}
+.team-card p{
+    color: var(--main-color);
+}
+
+.team-card .btn3{
+    background-color: var(--main-color);
+    border: .2rem solid var(--main-color);
+}
+
+.team-card .btn3:hover {
+    background-color: transparent;
+    border: .2rem solid var(--main-color);
+    color: var(--main-color);
+}
+.team-img{
+    background: url('founder2.jpg');
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.projects {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-color);
+    padding: 10% 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects h2 {
+    text-align: center;
+}
+.projects h2 span{
+    color: var(--second-main-color);
+}
+.card-container{
+    display: grid;
+    margin-top: 3rem;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+}
+.card{
+    background-color: var(--main-color);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .2rem solid var(--second-main-color);
+    flex-direction: column;
+    border-radius: 1rem;
+    height: 26rem;
+    gap: .5rem;
+    padding: 2rem 3rem;
+    transition: .5s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    border: .2rem solid var(--text-color);
+}
+.card  i {
+    font-size: 3rem;
+}
+.card h3, i{
+    color: var(--second-main-color);
+}
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10% 9rem;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--second-main-color);
+}
+
+.contact h2 span{
+    color: var(--main-color);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 1.2rem;
+}
+
+form input{
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    border: .2rem solid var(--main-color);
+}
+form input::placeholder{
+    font-weight: bold;
+}
+form textarea{
+    border: .2rem solid var(--main-color);
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    resize: none;
+}
+form textarea::placeholder{
+    font-weight: bold;
+}
+
+footer{
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-color);
+    padding: 2% 9rem;
+    justify-content: space-between;
+}
+
+.footer-text p{
+    color: var(--second-main-color);
+    font-weight: 500;
+
+}
+
+.footer-iconTop a i{
+    color: var(--main-color);
+    font-size: 3rem;
+    background-color: var(--second-main-color);
+    border-radius: .5rem;
+}
+
+@media (max-width : 1450px) {
+    html{
+        font-size: 85%;
+    }
+
+    .header {
+        padding: 1.8rem 8rem;
+    }
+    section{
+        padding: 8% 8rem;
+    }
+}
+
+@media (max-width : 1200px) {
+    .card-container{
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .card{
+        padding: 1rem 2.8rem;
+    }
+    .navbar ul{
+        gap: 1.2rem;
+    }
+    .navbar ul li a{
+        font-size: 1rem;
+    }
+    .about-img{
+        width: 23rem;
+        height: 23rem;
+    }
+    .home-img{
+        width: 23rem;
+        height: 23rem;
+    }
+    .home{
+        padding: 6% 5rem;
+
+    }
+    .card{
+        padding : 1rem 2rem;
+    }
+    .team-img{
+        width: 18rem;
+        height: 18rem;
+    }
+    section{
+        padding: 6% 5rem;
+    }
+}
+
+@media (max-width : 1050px) {
+    html{
+        font-size: 75%;
+    }
+}
+
+@media (max-width : 950px) {
+    html{
+        font-size: 70%;
+    }
+}
+@media (max-width : 860px) {
+    .side-bar{
+        width: 40vw;
+    }
+    /* .home , .about, .projects, .team, .contact, footer{
+        padding: 2rem 3rem;
+    } */
+    .home{
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+        padding: 5% 5rem;
+    }
+    .home-img{
+        width: 21rem;
+        height: 21rem;
+    }
+    .home-content{
+        width: 100%;
+    }
+    .about{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .about-content{
+        width: 100%
+    }
+    .hideItems{
+        display: none;
+    }
+    #menu-icon{
+        display: block;
+    }
+   .card-container{
+    flex-direction: column;
+   }
+   .card{
+    height: 18rem;
+   }
+   .team-card{
+    width: 18rem;
+   }
+   .team-img{
+    width: 13rem;
+    height: 13rem;
+   }
+   form{
+    width: 100%;
+   }
+}
+
+@media (max-width : 680px) {
+    .about, .contact, .projects, .team , footer {
+        padding: 5% 5rem;
+    }
+    .team{
+        height: 100vh;
+    }
+.team-container{
+    flex-direction: column;
+    gap: 1rem;
+}
+.team-card{
+    width: 80%;
+    height: 20rem;
+}
+.team-img{
+    border-radius: .5rem;
+    background-position: top center;
+    background-size: contain;
+    width: 10rem;
+    height: 10rem;
+}
+
+.team-card .btn3{
+    padding: .4rem 1.5rem;
+}
+    .logo-text{
+        font-size: 1.2rem;
+    }
+    .logo-container{
+        width: 2rem;
+        height: 2rem;
+    }
+    #menu-icon{
+        font-size: 1.8rem;
+    }
+    .header{
+        padding: 1.8rem 5rem;
+    
+    }
+}
+
+@media (max-width : 455px) {
+    .side-bar{
+        width: 80%;
+    }
+    .about{
+        gap: 2.5rem;
+    }
+    .home{
+        gap: 2.5rem;
+    }
+    .team-container{
+        gap: 2.5rem;
+    }
+    .card{
+        height: 20rem;
+    }
+    html {
+        font-size: 50%;
+    }
+}
